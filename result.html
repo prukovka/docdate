@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Готовый документ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <h2 class="mb-4">Ваш документ</h2>
+    <pre class="bg-white p-3 border rounded">{{ content }}</pre>
+    <form method="POST" action="/download">
+      <input type="hidden" name="content" value="{{ content }}">
+      <input type="hidden" name="filename" value="{{ filename }}">
+      <button type="submit" class="btn btn-primary mt-3">📄 Скачать .txt</button>
+    </form>
+    <a href="/" class="btn btn-link mt-3">⬅ Назад</a>
+  </div>
+</body>
+</html>
